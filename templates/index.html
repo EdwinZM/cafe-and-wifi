@@ -10,9 +10,13 @@
 <body>
     <header class="cafe-navbar">
         <div style="position: absolute;">
-            <button type="button" class="btn btn-link">Log In</button>
-            <button type="button" class="btn btn-link">Sign Up</button>
-        </div>
+            {% if auth %}
+            <button type="button" class="btn btn-link"><a href="/logout">Log Out</a></button>
+            {% else %}
+            <button type="button" class="btn btn-link"><a href="/login">Log In</a></button>
+            <button type="button" class="btn btn-link"><a href="/signup">Sign Up</a></button>
+            {% endif %}
+        </div> 
     </header>
     <div class="header">
         <h1 class="title">Cafes and Wifi</h1>
@@ -24,8 +28,16 @@
         <img class="card-img-top" src="{{cafe.img_url}}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{cafe.name}}</h5>
-            <p class="card-text">Located in {{cafe.location}}, contains {{cafe.seats}} seats.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <ul>
+                <li>Location: {{cafe.location}}</li>
+                <li>Seats: {{cafe.seats}}</li>
+                <li>Has Wifi: {{"Yes" if cafe.has_wifi else "No"}}</li>
+                <li>Has Sockets: {{"Yes" if cafe.has_sockets else "No"}}</li>
+                <li>Has Toilets: {{"Yes" if cafe.has_toilets else "No"}}</li>
+                <li>Can Take Calls: {{"Yes" if cafe.can_take_calls else "No"}}</li>
+
+            </ul>
+            <button type="button" class="btn btn-secondary btn-sm"><a href="{{cafe.map_url}}" target="_blank">Check Map</a></button>
         </div>
         </div>  
     
