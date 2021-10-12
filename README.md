@@ -3,6 +3,8 @@
 A website made with Python Flask and SQLite
 to find cafes with wifi.
 
+Visit the site at https://cafe-n-wifi.herokuapp.com/
+
 # Modules
 
 ´´´
