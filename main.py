@@ -153,4 +153,4 @@ def logout():
     logout_user()
     return redirect("/")
 
-app.run(debug=True)
+app.run()
