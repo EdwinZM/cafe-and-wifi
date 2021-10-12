@@ -11,6 +11,7 @@
     <header class="cafe-navbar">
         <div style="position: absolute;">
             {% if auth %}
+            <button type="button" class="btn btn-link"><a href="/add_cafe">Add Cafe</a></button>
             <button type="button" class="btn btn-link"><a href="/logout">Log Out</a></button>
             {% else %}
             <button type="button" class="btn btn-link"><a href="/login">Log In</a></button>
@@ -42,8 +43,6 @@
         </div>  
     
     {% endfor %}
-
-    
-    
+        
 </body>
 </html>

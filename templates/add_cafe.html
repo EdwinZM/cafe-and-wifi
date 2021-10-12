@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="../static/index.css" rel="stylesheet">
+    <title>Add a Cafe</title>
+</head>
+<body>
+    <header class="cafe-navbar">
+        <div style="position:absolute">
+            <button type="button" class="btn btn-link"><a href="/">Home</a></button>
+            <button type="button" class="btn btn-link"><a href="/logout">Log Out</a></button>
+          </div>
+    </header>
+
+    <div class="header">
+        <h1 class="title">Add a Cafe</h1>
+    </div>
+
+    <form action="" method="POST">
+        {{form.hidden_tag()}}
+        {{form.name.label}}
+        {{form.name(size=50)}}
+        <hr>
+        {{form.map_url.label}}
+        {{form.map_url(size=50)}}
+        <hr>
+        {{form.img_url.label}}
+        {{form.img_url(size=50)}}
+        <hr>
+        {{form.location.label}}
+        {{form.location(size=50)}}
+        <hr>
+        {{form.has_sockets.label}}
+        {{form.has_sockets}}
+        <hr>
+        {{form.has_toilet.label}}
+        {{form.has_toilet}}
+        <hr>
+        {{form.has_wifi.label}}
+        {{form.has_wifi}}
+        <hr>
+        {{form.can_take_calls.label}}
+        {{form.can_take_calls}}
+        <hr>
+        {{form.seats.label}}
+        {{form.seats}}
+        <hr>
+        {{form.coffee_price.label}}
+        {{form.coffee_price}}
+        <hr>
+        {{form.submit()}}
+    </form>
+    
+</body>
+</html>

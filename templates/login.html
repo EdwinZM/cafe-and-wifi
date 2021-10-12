@@ -7,7 +7,12 @@
     <link href="../static/index.css" rel="stylesheet">
     <title>Log In</title>
 </head>
-<body>
+<body class="header">
+  <header class="cafe-navbar">
+    <div style="position:absolute">
+      <button type="button" class="btn btn-link"><a href="/">Home</a></button>
+    </div>
+</header>
     <form action="" method="POST">
       {% if error %}
       <i style="color: red">{{error}}</i>
