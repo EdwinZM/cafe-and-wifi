@@ -58,4 +58,14 @@ form {
     form {
         margin: 50px;
     }
+    .title {
+        margin: 20px; 
+        font-size: 50px;
+        align-self: center;
+    }
+
+    .card {
+        margin: 50px;
+    }
+
 }
